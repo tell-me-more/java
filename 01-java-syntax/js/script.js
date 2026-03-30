@@ -6,6 +6,9 @@ const state = {
     zuordnen: false,
     verschieben: false,
     fehlersuche: false,
+    luecke: false,
+    richtigfalsch: false,
+    multiplechoice: false,
     code: false,
   },
 };
@@ -186,6 +189,9 @@ function bindChecks() {
       if (task === "zuordnen") checkZuordnen();
       if (task === "verschieben") checkVerschieben();
       if (task === "fehlersuche") checkFehlersuche();
+      if (task === "luecke") checkLuecke();
+      if (task === "richtigfalsch") checkRichtigFalsch();
+      if (task === "multiplechoice") checkMultipleChoice();
       if (task === "code") checkCode();
     });
   });
@@ -332,6 +338,95 @@ function checkFehlersuche() {
   setFeedback(
     "fehlersuche",
     "Noch nicht passend. Tipp: Achte auf korrekte Schreibweise von main, fehlende Semikolons und unnötige Leerzeilen innerhalb des Codes.",
+  );
+}
+
+function checkLuecke() {
+  const checks = {
+    gapClass: "class",
+    gapMain: "main",
+    gapPrint: "println",
+  };
+
+  const allCorrect = Object.entries(checks).every(([id, expected]) => {
+    return document.getElementById(id).value === expected;
+  });
+
+  if (allCorrect) {
+    markDone("luecke");
+    setFeedback("luecke", "Sehr gut! Du hast die Syntax-Lücken korrekt ergänzt.");
+    return;
+  }
+
+  setFeedback(
+    "luecke",
+    "Noch nicht ganz korrekt. Tipp: Java unterscheidet Groß-/Kleinschreibung, und für neue Zeilen nutzt man println.",
+  );
+}
+
+function checkRichtigFalsch() {
+  const expected = {
+    tf1: "falsch",
+    tf2: "richtig",
+    tf3: "richtig",
+  };
+
+  const allAnswered = Object.keys(expected).every((name) => {
+    return document.querySelector(`input[name="${name}"]:checked`);
+  });
+
+  if (!allAnswered) {
+    setFeedback("richtigfalsch", "Bitte beantworte zuerst alle drei Aussagen.");
+    return;
+  }
+
+  const allCorrect = Object.entries(expected).every(([name, value]) => {
+    const selected = document.querySelector(`input[name="${name}"]:checked`);
+    return selected && selected.value === value;
+  });
+
+  if (allCorrect) {
+    markDone("richtigfalsch");
+    setFeedback("richtigfalsch", "Top! Alle Aussagen sind richtig bewertet.");
+    return;
+  }
+
+  setFeedback(
+    "richtigfalsch",
+    "Einige Aussagen stimmen noch nicht. Tipp: Achte besonders auf Groß-/Kleinschreibung und Semikolon-Regel.",
+  );
+}
+
+function checkMultipleChoice() {
+  const expected = {
+    mc1: "a",
+    mc2: "b",
+    mc3: "c",
+  };
+
+  const allAnswered = Object.keys(expected).every((name) => {
+    return document.querySelector(`input[name="${name}"]:checked`);
+  });
+
+  if (!allAnswered) {
+    setFeedback("multiplechoice", "Bitte beantworte alle drei Quizfragen.");
+    return;
+  }
+
+  const allCorrect = Object.entries(expected).every(([name, value]) => {
+    const selected = document.querySelector(`input[name="${name}"]:checked`);
+    return selected && selected.value === value;
+  });
+
+  if (allCorrect) {
+    markDone("multiplechoice");
+    setFeedback("multiplechoice", "Klasse! Du beherrschst die wichtigsten Syntax-Regeln schon gut.");
+    return;
+  }
+
+  setFeedback(
+    "multiplechoice",
+    "Noch nicht alles korrekt. Tipp: Variablen brauchen einen Typ, Vergleiche nutzen == und Ausgabe heißt exakt System.out.println.",
   );
 }
 
