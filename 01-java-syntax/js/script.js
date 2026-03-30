@@ -57,7 +57,11 @@ const errorLines = [
 
 const errorIndexes = [1, 2, 5];
 
-init();
+try {
+  init();
+} catch (err) {
+  console.error("Die Seite konnte nicht vollständig initialisiert werden.", err);
+}
 
 function init() {
   loadState();
@@ -72,7 +76,7 @@ function init() {
 }
 
 function loadState() {
-  const raw = localStorage.getItem(STORAGE_KEY);
+  const raw = safeStorageGet(STORAGE_KEY);
   if (!raw) return;
 
   try {
@@ -87,7 +91,24 @@ function loadState() {
 }
 
 function saveState() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  safeStorageSet(STORAGE_KEY, JSON.stringify(state));
+}
+
+function safeStorageGet(key) {
+  try {
+    return localStorage.getItem(key);
+  } catch (err) {
+    console.warn("localStorage ist nicht verfügbar. Fortschritt wird nicht geladen.", err);
+    return null;
+  }
+}
+
+function safeStorageSet(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch (err) {
+    console.warn("localStorage ist nicht verfügbar. Fortschritt wird nicht gespeichert.", err);
+  }
 }
 
 function renderRuleCards() {
