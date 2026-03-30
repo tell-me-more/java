@@ -13,19 +13,39 @@ const state = {
 const rules = [
   {
     title: "1) Jede Anweisung endet mit ;",
-    text: "Ein Semikolon zeigt Java: Diese Anweisung ist zu Ende. Ohne ; kann das Programm nicht richtig übersetzt werden.",
+    text: "Einzelne Befehle enden meistens mit einem Semikolon, z. B. `int alter = 12;` oder `System.out.println(alter);`.",
   },
   {
-    title: "2) Blöcke nutzen geschweifte Klammern { }",
-    text: "Klammern fassen zusammen, was zu einer Klasse, Methode oder Schleife gehört. Öffnende und schließende Klammer müssen zusammenpassen.",
+    title: "2) Groß- und Kleinschreibung ist wichtig",
+    text: "`System.out.println(...)` ist richtig, aber `system.out.println(...)` ist falsch.",
   },
   {
-    title: "3) Das Programm startet in main",
-    text: "Die main-Methode ist der Einstiegspunkt. Dort beginnt Java die Ausführung.",
+    title: "3) Blöcke stehen in { }",
+    text: "Zusammengehörige Anweisungen stehen in geschweiften Klammern, z. B. bei `if`, Schleifen, Methoden und Klassen.",
   },
   {
-    title: "4) Groß-/Kleinschreibung ist wichtig",
-    text: "main und Main sind unterschiedlich. Auch System muss genau so geschrieben werden.",
+    title: "4) Runde Klammern gehören zu Bedingungen und Aufrufen",
+    text: "Nach `if`, `while` und bei Methodenaufrufen werden runde Klammern `()` benutzt.",
+  },
+  {
+    title: "5) Variablen müssen deklariert werden",
+    text: "In Java gibst du meist den Typ an, z. B. `int`, `double`, `String`, `boolean`.",
+  },
+  {
+    title: "6) `=` ist Zuweisung, `==` ist Vergleich",
+    text: "`x = 5;` gibt einen Wert. `x == 5` vergleicht zwei Werte.",
+  },
+  {
+    title: "7) Text steht in doppelten Anführungszeichen",
+    text: "Zeichenketten schreibt man in `\" \"`, z. B. `String text = \"Hallo\";`.",
+  },
+  {
+    title: "8) Kommentare werden nicht ausgeführt",
+    text: "Kommentare erklären den Code: `// ...` für eine Zeile oder `/* ... */` für mehrere Zeilen.",
+  },
+  {
+    title: "9) Einfache Ausgabe: System.out.println(...)",
+    text: "Für den Start ist das die wichtigste feste Schreibweise, z. B. `System.out.println(\"Hallo Welt\");`.",
   },
 ];
 
