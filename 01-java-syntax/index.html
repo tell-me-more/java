@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Java lernen · 01 Java-Syntax</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="back-link" href="../index.html">← Zur Modulübersicht</a>
+      <h1>01 · Java-Syntax entdecken</h1>
+      <p class="lead">
+        In diesem Modul lernst du die Grundregeln der Java-Syntax Schritt für Schritt kennen.
+        Lies zuerst die Merksätze und bearbeite danach die Erkundungsaufgaben.
+      </p>
+    </div>
+  </header>
 
+  <main>
+    <div class="container layout">
+      <section class="panel" aria-labelledby="syntax-grundlagen">
+        <h2 id="syntax-grundlagen">Grundlagen</h2>
+        <div class="rule-grid" id="ruleGrid"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="aufgaben-title">
+        <div class="task-header">
+          <h2 id="aufgaben-title">Erkundungsaufgaben</h2>
+          <p id="progressText">Fortschritt: 0 / 4 erledigt</p>
+        </div>
+
+        <div class="progress-track" aria-hidden="true">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <nav class="task-nav" aria-label="Aufgaben auswählen">
+          <button type="button" class="task-tab active" data-task="zuordnen">1 · Zuordnen</button>
+          <button type="button" class="task-tab" data-task="verschieben">2 · Verschieben</button>
+          <button type="button" class="task-tab" data-task="fehlersuche">3 · Fehlersuche</button>
+          <button type="button" class="task-tab" data-task="code">4 · Code schreiben</button>
+        </nav>
+
+        <article class="task-card active" data-task-panel="zuordnen">
+          <h3>Aufgabe 1: Zuordnen</h3>
+          <p>Ordne jedem Begriff den passenden Java-Code zu.</p>
+
+          <div class="match-row">
+            <label for="matchClass">Klasse</label>
+            <select id="matchClass">
+              <option value="">Bitte auswählen …</option>
+              <option value="class">public class Main { ... }</option>
+              <option value="main">public static void main(String[] args) { ... }</option>
+              <option value="ausgabe">System.out.println("Hallo");</option>
+              <option value="semicolon">int x = 7;</option>
+            </select>
+          </div>
+
+          <div class="match-row">
+            <label for="matchMain">Startmethode</label>
+            <select id="matchMain">
+              <option value="">Bitte auswählen …</option>
+              <option value="class">public class Main { ... }</option>
+              <option value="main">public static void main(String[] args) { ... }</option>
+              <option value="ausgabe">System.out.println("Hallo");</option>
+              <option value="semicolon">int x = 7;</option>
+            </select>
+          </div>
+
+          <div class="match-row">
+            <label for="matchOutput">Konsolenausgabe</label>
+            <select id="matchOutput">
+              <option value="">Bitte auswählen …</option>
+              <option value="class">public class Main { ... }</option>
+              <option value="main">public static void main(String[] args) { ... }</option>
+              <option value="ausgabe">System.out.println("Hallo");</option>
+              <option value="semicolon">int x = 7;</option>
+            </select>
+          </div>
+
+          <div class="match-row">
+            <label for="matchSemicolon">Anweisung mit Semikolon</label>
+            <select id="matchSemicolon">
+              <option value="">Bitte auswählen …</option>
+              <option value="class">public class Main { ... }</option>
+              <option value="main">public static void main(String[] args) { ... }</option>
+              <option value="ausgabe">System.out.println("Hallo");</option>
+              <option value="semicolon">int x = 7;</option>
+            </select>
+          </div>
+
+          <button type="button" class="check-btn" data-check="zuordnen">Prüfen</button>
+          <p class="feedback" id="feedback-zuordnen"></p>
+        </article>
+
+        <article class="task-card" data-task-panel="verschieben">
+          <h3>Aufgabe 2: Verschieben</h3>
+          <p>Bringe die Codezeilen in eine sinnvolle Reihenfolge. Nutze ↑ und ↓.</p>
+
+          <ol id="sortList" class="sortable-list"></ol>
+
+          <button type="button" class="check-btn" data-check="verschieben">Prüfen</button>
+          <p class="feedback" id="feedback-verschieben"></p>
+        </article>
+
+        <article class="task-card" data-task-panel="fehlersuche">
+          <h3>Aufgabe 3: Fehlersuche</h3>
+          <p>
+            Markiere die Zeilen mit Syntaxfehlern. Es gibt <strong>genau 3</strong> fehlerhafte Zeilen.
+          </p>
+
+          <div class="error-lines" id="errorLines"></div>
+
+          <button type="button" class="check-btn" data-check="fehlersuche">Prüfen</button>
+          <p class="feedback" id="feedback-fehlersuche"></p>
+        </article>
+
+        <article class="task-card" data-task-panel="code">
+          <h3>Aufgabe 4: Selbst Code schreiben</h3>
+          <p>
+            Schreibe ein Mini-Programm, das eine Klasse <code>Main</code> enthält und in der
+            <code>main</code>-Methode den Text <code>"Java ist cool"</code> ausgibt.
+          </p>
+
+          <label for="codeInput" class="sr-only">Code-Eingabe</label>
+          <textarea id="codeInput" spellcheck="false"></textarea>
+
+          <div class="preview-box">
+            <h4>Vorschau (simulierte Konsole)</h4>
+            <pre id="previewOutput">(Noch keine Ausgabe)</pre>
+          </div>
+
+          <button type="button" class="check-btn" data-check="code">Prüfen</button>
+          <p class="feedback" id="feedback-code"></p>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© Dominik Bechinie | Martin-Andersen-Nexö-Gymnasium Dresden | 2026</div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
