@@ -28,7 +28,7 @@
       <section class="panel" aria-labelledby="aufgaben-title">
         <div class="task-header">
           <h2 id="aufgaben-title">Erkundungsaufgaben</h2>
-          <p id="progressText">Fortschritt: 0 / 4 erledigt</p>
+          <p id="progressText">Fortschritt: 0 / 7 erledigt</p>
         </div>
 
         <div class="progress-track" aria-hidden="true">
@@ -39,7 +39,10 @@
           <button type="button" class="task-tab active" data-task="zuordnen">1 · Zuordnen</button>
           <button type="button" class="task-tab" data-task="verschieben">2 · Verschieben</button>
           <button type="button" class="task-tab" data-task="fehlersuche">3 · Fehlersuche</button>
-          <button type="button" class="task-tab" data-task="code">4 · Code schreiben</button>
+          <button type="button" class="task-tab" data-task="luecke">4 · Lückencode</button>
+          <button type="button" class="task-tab" data-task="richtigfalsch">5 · Richtig/Falsch</button>
+          <button type="button" class="task-tab" data-task="multiplechoice">6 · Mini-Quiz</button>
+          <button type="button" class="task-tab" data-task="code">7 · Code schreiben</button>
         </nav>
 
         <article class="task-card active" data-task-panel="zuordnen">
@@ -117,7 +120,7 @@
         </article>
 
         <article class="task-card" data-task-panel="code">
-          <h3>Aufgabe 4: Selbst Code schreiben</h3>
+          <h3>Aufgabe 7: Selbst Code schreiben</h3>
           <p>
             Schreibe ein Mini-Programm, das eine Klasse <code>Main</code> enthält und in der
             <code>main</code>-Methode den Text <code>"Java ist cool"</code> ausgibt.
@@ -133,6 +136,99 @@
 
           <button type="button" class="check-btn" data-check="code">Prüfen</button>
           <p class="feedback" id="feedback-code"></p>
+        </article>
+
+        <article class="task-card" data-task-panel="luecke">
+          <h3>Aufgabe 4: Lückencode</h3>
+          <p>Wähle die passenden Begriffe aus, damit der Code korrekt ist.</p>
+
+          <div class="match-row">
+            <label for="gapClass">Klassendeklaration</label>
+            <select id="gapClass">
+              <option value="">Bitte auswählen …</option>
+              <option value="class">class</option>
+              <option value="clas">clas</option>
+              <option value="Class">Class</option>
+            </select>
+          </div>
+
+          <div class="match-row">
+            <label for="gapMain">Methodenname</label>
+            <select id="gapMain">
+              <option value="">Bitte auswählen …</option>
+              <option value="Main">Main</option>
+              <option value="main">main</option>
+              <option value="mian">mian</option>
+            </select>
+          </div>
+
+          <div class="match-row">
+            <label for="gapPrint">Ausgabe</label>
+            <select id="gapPrint">
+              <option value="">Bitte auswählen …</option>
+              <option value="print">System.out.print</option>
+              <option value="println">System.out.println</option>
+              <option value="system">system.out.println</option>
+            </select>
+          </div>
+
+          <button type="button" class="check-btn" data-check="luecke">Prüfen</button>
+          <p class="feedback" id="feedback-luecke"></p>
+        </article>
+
+        <article class="task-card" data-task-panel="richtigfalsch">
+          <h3>Aufgabe 5: Richtig oder Falsch?</h3>
+          <p>Bewerte die Aussagen zur Java-Syntax.</p>
+
+          <div class="tf-list">
+            <div class="tf-item">
+              <p>1) In Java ist <code>main</code> dasselbe wie <code>Main</code>.</p>
+              <label><input type="radio" name="tf1" value="falsch"> Falsch</label>
+              <label><input type="radio" name="tf1" value="richtig"> Richtig</label>
+            </div>
+            <div class="tf-item">
+              <p>2) Nach <code>System.out.println("Hi")</code> gehört ein Semikolon.</p>
+              <label><input type="radio" name="tf2" value="richtig"> Richtig</label>
+              <label><input type="radio" name="tf2" value="falsch"> Falsch</label>
+            </div>
+            <div class="tf-item">
+              <p>3) Java-Blöcke werden mit <code>{ }</code> markiert.</p>
+              <label><input type="radio" name="tf3" value="richtig"> Richtig</label>
+              <label><input type="radio" name="tf3" value="falsch"> Falsch</label>
+            </div>
+          </div>
+
+          <button type="button" class="check-btn" data-check="richtigfalsch">Prüfen</button>
+          <p class="feedback" id="feedback-richtigfalsch"></p>
+        </article>
+
+        <article class="task-card" data-task-panel="multiplechoice">
+          <h3>Aufgabe 6: Mini-Quiz (Multiple Choice)</h3>
+          <p>Kreuze jeweils die passende Antwort an.</p>
+
+          <fieldset class="mc-block">
+            <legend>1) Welche Zeile deklariert eine Ganzzahl-Variable korrekt?</legend>
+            <label><input type="radio" name="mc1" value="a"> <code>int alter = 12;</code></label>
+            <label><input type="radio" name="mc1" value="b"> <code>Int alter = 12;</code></label>
+            <label><input type="radio" name="mc1" value="c"> <code>int alter == 12;</code></label>
+          </fieldset>
+
+          <fieldset class="mc-block">
+            <legend>2) Welche Zeile ist ein Vergleich?</legend>
+            <label><input type="radio" name="mc2" value="a"> <code>x = 5;</code></label>
+            <label><input type="radio" name="mc2" value="b"> <code>x == 5</code></label>
+            <label><input type="radio" name="mc2" value="c"> <code>x := 5;</code></label>
+          </fieldset>
+
+          <fieldset class="mc-block">
+            <legend>3) Welche Ausgabezeile ist richtig geschrieben?</legend>
+            <label><input type="radio" name="mc3" value="a"> <code>System.Out.Println("Hi");</code></label>
+            <label><input type="radio" name="mc3" value="b"> <code>system.out.println("Hi");</code></label>
+            <label><input type="radio" name="mc3" value="c"> <code>System.out.println("Hi");</code></label>
+          </fieldset>
+
+          <button type="button" class="check-btn" data-check="multiplechoice">Prüfen</button>
+          <p class="feedback" id="feedback-multiplechoice"></p>
         </article>
       </section>
     </div>

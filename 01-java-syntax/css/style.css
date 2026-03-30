@@ -234,6 +234,39 @@ textarea {
   background: #0b1226;
 }
 
+.tf-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0.65rem 0 0.9rem;
+}
+
+.tf-item,
+.mc-block {
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #0b1226;
+  padding: 0.65rem;
+}
+
+.tf-item p {
+  margin: 0 0 0.45rem;
+}
+
+.tf-item label,
+.mc-block label {
+  display: block;
+  margin: 0.35rem 0;
+}
+
+.mc-block {
+  margin: 0.65rem 0;
+}
+
+.mc-block legend {
+  padding: 0 0.3rem;
+  color: #dbeafe;
+}
+
 textarea {
   min-height: 240px;
   font-family: "Cascadia Code", "Fira Code", Consolas, monospace;
