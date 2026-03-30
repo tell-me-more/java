@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Lernwebseite | Klasse 7</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --tile: #1f2937;
+      --tile-border: #334155;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #f59e0b;
+      --accent-2: #60a5fa;
+    }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Inter", Arial, sans-serif;
+      background: linear-gradient(135deg, #0b1226 0%, #0f172a 55%, #111827 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 3.2rem 0 2rem;
+      border-bottom: 1px solid #1e293b;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(3px);
+    }
+
+    .headline {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1.15;
+      letter-spacing: 0.02em;
+    }
+
+    .headline .java {
+      color: var(--accent);
+    }
+
+    .subline {
+      margin: 0.9rem 0 0;
+      max-width: 75ch;
+      color: var(--muted);
+      font-size: 1.06rem;
+      line-height: 1.5;
+    }
+
+    main {
+      flex: 1;
+      padding: 2.2rem 0 3rem;
+    }
+
+    .tiles {
+      display: grid;
+      gap: 0.95rem;
+    }
+
+    .tile {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: linear-gradient(90deg, rgba(31, 41, 55, 0.95), rgba(30, 41, 59, 0.95));
+      border: 1px solid var(--tile-border);
+      border-left: 5px solid var(--accent-2);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .tile:hover,
+    .tile:focus-visible {
+      transform: translateY(-2px);
+      border-color: #60a5fa;
+      box-shadow: 0 8px 18px rgba(2, 6, 23, 0.45);
+      outline: none;
+    }
+
+    .tile-title {
+      margin: 0;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+
+    .tile-sub {
+      margin: 0.3rem 0 0;
+      color: #cbd5e1;
+      font-size: 0.96rem;
+    }
+
+    footer {
+      border-top: 1px solid #1e293b;
+      padding: 1.15rem 0;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      background: rgba(2, 6, 23, 0.45);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="headline">Informatik &amp; <span class="java">Java</span> Lernwebseite</h1>
+      <p class="subline">Willkommen! Wähle ein Thema aus und arbeite die Inhalte in der vorgegebenen Reihenfolge durch. Die Module sind auf den Informatikunterricht der 7. Klasse am Gymnasium abgestimmt.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="tiles" aria-label="Lernmodule">
+        <a class="tile" href="01-java-syntax/index.html">
+          <h2 class="tile-title">01 · Java-Syntax</h2>
+          <p class="tile-sub">Grundregeln und erster Programmaufbau</p>
+        </a>
+        <a class="tile" href="02-java-variablen-datentypen/index.html">
+          <h2 class="tile-title">02 · Variablen &amp; Datentypen</h2>
+          <p class="tile-sub">Werte speichern und passende Datentypen nutzen</p>
+        </a>
+        <a class="tile" href="03-java-rechnen-zufallszahlen/index.html">
+          <h2 class="tile-title">03 · Rechnen &amp; Zufallszahlen</h2>
+          <p class="tile-sub">Operatoren, Berechnungen und zufällige Werte</p>
+        </a>
+        <a class="tile" href="04-java-bedingungen/index.html">
+          <h2 class="tile-title">04 · Bedingungen</h2>
+          <p class="tile-sub">Entscheidungen mit if und else treffen</p>
+        </a>
+        <a class="tile" href="05-java-vergleiche-logische-operatoren/index.html">
+          <h2 class="tile-title">05 · Vergleiche &amp; logische Operatoren</h2>
+          <p class="tile-sub">Bedingungen verknüpfen und prüfen</p>
+        </a>
+        <a class="tile" href="06-java-schleifen-for/index.html">
+          <h2 class="tile-title">06 · Schleifen (for)</h2>
+          <p class="tile-sub">Wiederholungen mit Zählschleifen steuern</p>
+        </a>
+        <a class="tile" href="07-java-schleifen-while/index.html">
+          <h2 class="tile-title">07 · Schleifen (while)</h2>
+          <p class="tile-sub">Bedingte Wiederholungen verstehen und anwenden</p>
+        </a>
+        <a class="tile" href="08-haeufige-fehler/index.html">
+          <h2 class="tile-title">08 · Häufige Fehler</h2>
+          <p class="tile-sub">Typische Stolperfallen erkennen und vermeiden</p>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">Copyright Dominik Bechinie | Martin-Andersen-Nexö-Gymnasium Dresden | 2026</div>
+  </footer>
+</body>
+</html>
