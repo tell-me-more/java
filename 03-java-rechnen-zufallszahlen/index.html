@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Java Klasse 7 · 03 · Rechnen</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="back-link" href="../index.html">← Zur Modulübersicht</a>
+      <h1>03 · Rechnen</h1>
+      <p class="small">Mit Zahlenvariablen kannst du plus, minus, mal und geteilt rechnen.</p>
+    </div>
+  </header>
 
+  <main>
+    <div class="container">
+      <section class="card grid-2">
+        <div>
+          <h2>Kurz erklärt</h2>
+          <p>Mit Zahlenvariablen kannst du plus, minus, mal und geteilt rechnen.</p>
+          <details>
+            <summary>Schritt-für-Schritt</summary>
+            <ol><li>Lege Zahlen mit int an.</li><li>Nutze +, -, * oder /.</li><li>Gib das Ergebnis aus.</li></ol>
+          </details>
+        </div>
+        <div>
+          <h2>Interaktives Beispiel</h2>
+          <pre><code>int a = 8;
+int b = 3;
+System.out.println(a + b);</code></pre>
+          <button class="run-example" data-output="11">Ausgabe simulieren</button>
+          <div class="output">(Noch keine Ausgabe)</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Interaktive Übungen</h2>
+        <div class="task" data-require="system.out.println(|9 + 4|;" data-forbid="class">
+  <h3>Aufgabe 1</h3>
+  <p>Gib das Ergebnis von 9 + 4 aus.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+<div class="task" data-require="int |*|system.out.println(" data-forbid="class">
+  <h3>Aufgabe 2</h3>
+  <p>Rechne mit zwei Variablen und gib das Produkt aus.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+<div class="task" data-require="int |+|/ 2|system.out.println(" data-forbid="class">
+  <h3>Aufgabe 3</h3>
+  <p>Berechne zuerst eine Summe, gib danach die Hälfte aus.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer><div class="container">03 · Rechnen · interaktiv</div></footer>
+  <script src="../js/app.js"></script>
+</body>
+</html>

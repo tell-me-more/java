@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Java Klasse 7 · 08 · Häufige Fehler</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="back-link" href="../index.html">← Zur Modulübersicht</a>
+      <h1>08 · Häufige Fehler</h1>
+      <p class="small">Typische Fehler sind fehlendes Semikolon, falsche Klammern oder falsche Schreibweise.</p>
+    </div>
+  </header>
 
+  <main>
+    <div class="container">
+      <section class="card grid-2">
+        <div>
+          <h2>Kurz erklärt</h2>
+          <p>Typische Fehler sind fehlendes Semikolon, falsche Klammern oder falsche Schreibweise.</p>
+          <details>
+            <summary>Schritt-für-Schritt</summary>
+            <ol><li>Jede Befehlszeile endet mit ;</li><li>Klammern immer paarweise setzen.</li><li>Groß- und Kleinschreibung beachten.</li></ol>
+          </details>
+        </div>
+        <div>
+          <h2>Interaktives Beispiel</h2>
+          <pre><code>int zahl = 7;
+if (zahl &gt; 5) {
+  System.out.println(&quot;ok&quot;);
+}</code></pre>
+          <button class="run-example" data-output="ok">Ausgabe simulieren</button>
+          <div class="output">(Noch keine Ausgabe)</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Interaktive Übungen</h2>
+        <div class="task" data-require="system.out.println(|;" data-forbid="class">
+  <h3>Aufgabe 1</h3>
+  <p>Schreibe eine korrekte Ausgabezeile mit Semikolon.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+<div class="task" data-require="if (|) {" data-forbid="class">
+  <h3>Aufgabe 2</h3>
+  <p>Schreibe eine korrekte if-Bedingung mit Klammern.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+<div class="task" data-require="int |if (|system.out.println(" data-forbid="class">
+  <h3>Aufgabe 3</h3>
+  <p>Schreibe drei korrekte Zeilen: int, if, Ausgabe.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer><div class="container">08 · Häufige Fehler · interaktiv</div></footer>
+  <script src="../js/app.js"></script>
+</body>
+</html>
