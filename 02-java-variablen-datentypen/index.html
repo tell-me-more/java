@@ -17,31 +17,53 @@
 
   <main>
     <div class="container">
-      <section class="card">
-        <h2>Kurz erklärt</h2>
-        <p>Eine Variable ist wie eine beschriftete Box. In Klasse 7 reichen drei Typen: int für ganze Zahlen, double für Kommazahlen und String für Text.</p>
+      <section class="card grid-2">
+        <div>
+          <h2>Kurz erklärt</h2>
+          <p>Variablen speichern Werte. Für Klasse 7 nutzen wir int, double und String.</p>
+          <details>
+            <summary>Schritt-für-Schritt</summary>
+            <ol><li>int ist für ganze Zahlen.</li><li>String ist für Text.</li><li>Variable links, Wert rechts.</li></ol>
+          </details>
+        </div>
+        <div>
+          <h2>Interaktives Beispiel</h2>
+          <pre><code>int punkte = 7;
+System.out.println(punkte);</code></pre>
+          <button class="run-example" data-output="7">Ausgabe simulieren</button>
+          <div class="output">(Noch keine Ausgabe)</div>
+        </div>
       </section>
 
       <section class="card">
-        <h2>Ein Beispiel</h2>
-        <pre><code>int alter = 12;
-double groesse = 1.58;
-String name = "Lina";</code></pre>
-      </section>
-
-      <section class="card">
-        <h2>Übungen</h2>
-        <ol>
-          <li>Lege eine int-Variable punkte mit Wert 5 an.</li>
-          <li>Lege eine String-Variable stadt mit deinem Ort an.</li>
-          <li>Lege alle drei Typen korrekt in einem kurzen Programm an.</li>
-        </ol>
+        <h2>Interaktive Übungen</h2>
+        <div class="task" data-require="int alter =|;" data-forbid="class">
+  <h3>Aufgabe 1</h3>
+  <p>Lege eine int-Variable alter an.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+<div class="task" data-require="string name =|;" data-forbid="class">
+  <h3>Aufgabe 2</h3>
+  <p>Lege eine String-Variable name an.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+<div class="task" data-require="int |string |system.out.println(" data-forbid="class">
+  <h3>Aufgabe 3</h3>
+  <p>Lege int und String an und gib eine davon aus.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
       </section>
     </div>
   </main>
 
   <footer>
-    <div class="container">Modul 02 · Java-Grundlagen Klasse 7</div>
+  <footer><div class="container">&copy; Dominik Bechinie | Martin-Andersen-Nexö-Gymnasium | 2026</div></footer>
   </footer>
 </body>
 </html>

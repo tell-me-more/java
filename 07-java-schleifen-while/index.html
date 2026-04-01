@@ -17,33 +17,58 @@
 
   <main>
     <div class="container">
-      <section class="card">
-        <h2>Kurz erklärt</h2>
-        <p>Eine while-Schleife läuft, solange eine Bedingung wahr ist. Du musst im Block die Variable ändern, sonst endet die Schleife nicht.</p>
-      </section>
-
-      <section class="card">
-        <h2>Ein Beispiel</h2>
-        <pre><code>int n = 1;
-while (n <= 4) {
+      <section class="card grid-2">
+        <div>
+          <h2>Kurz erklärt</h2>
+          <p>while läuft so lange, wie die Bedingung wahr ist.</p>
+          <details>
+            <summary>Schritt-für-Schritt</summary>
+            <ol><li>Startwert setzen.</li><li>while-Bedingung schreiben.</li><li>Im Block die Variable ändern.</li></ol>
+          </details>
+        </div>
+        <div>
+          <h2>Interaktives Beispiel</h2>
+          <pre><code>int n = 1;
+while (n &lt;= 4) {
   System.out.println(n);
   n++;
 }</code></pre>
+          <button class="run-example" data-output="1
+2
+3
+4">Ausgabe simulieren</button>
+          <div class="output">(Noch keine Ausgabe)</div>
+        </div>
       </section>
 
       <section class="card">
-        <h2>Übungen</h2>
-        <ol>
-          <li>Lass n von 1 bis 3 laufen.</li>
-          <li>Starte bei 5 und zähle bis 8 hoch.</li>
-          <li>Lass eine Variable bei 10 starten und bis 0 herunterzählen.</li>
-        </ol>
+        <h2>Interaktive Übungen</h2>
+        <div class="task" data-require="int n = 1;|while (n &lt;= 3)|n++" data-forbid="class">
+  <h3>Aufgabe 1</h3>
+  <p>Starte bei 1 und zähle bis 3.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+<div class="task" data-require="int n = 5;|while (n &lt;= 8)|n++" data-forbid="class">
+  <h3>Aufgabe 2</h3>
+  <p>Starte bei 5 und zähle bis 8.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+<div class="task" data-require="int n = 10;|while (n &gt;= 0)|n--" data-forbid="class">
+  <h3>Aufgabe 3</h3>
+  <p>Starte bei 10 und zähle bis 0 herunter.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+
       </section>
     </div>
   </main>
 
-  <footer>
-    <div class="container">Modul 07 · Java-Grundlagen Klasse 7</div>
-  </footer>
+  <footer><div class="container">&copy; Dominik Bechinie | Martin-Andersen-Nexö-Gymnasium | 2026</div></footer>
 </body>
 </html>

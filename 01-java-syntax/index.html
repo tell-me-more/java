@@ -17,33 +17,51 @@
 
   <main>
     <div class="container">
-      <section class="card">
-        <h2>Kurz erklärt</h2>
-        <p>Java-Programme laufen in einem festen Rahmen. Du musst den Rahmen nur sauber abschreiben. Wichtig ist heute nur: Eine Ausgabezeile endet mit Semikolon.</p>
+      <section class="card grid-2">
+        <div>
+          <h2>Kurz erklärt</h2>
+          <p>Ein Befehl kann direkt etwas in der Konsole ausgeben. Jede Zeile endet mit Semikolon.</p>
+          <details>
+            <summary>Schritt-für-Schritt</summary>
+            <ol><li>Schreibe genau System.out.println.</li><li>Setze den Text in Anführungszeichen.</li><li>Beende die Zeile mit ;</li></ol>
+          </details>
+        </div>
+        <div>
+          <h2>Interaktives Beispiel</h2>
+          <pre><code>System.out.println(&quot;Hallo&quot;);</code></pre>
+          <button class="run-example" data-output="Hallo">Ausgabe simulieren</button>
+          <div class="output">(Noch keine Ausgabe)</div>
+        </div>
       </section>
 
       <section class="card">
-        <h2>Ein Beispiel</h2>
-        <pre><code>public class Main {
-  public static void main(String[] args) {
-    System.out.println("Hallo");
-  }
-}</code></pre>
-      </section>
-
-      <section class="card">
-        <h2>Übungen</h2>
-        <ol>
-          <li>Schreibe ein Programm, das "Hi" ausgibt.</li>
-          <li>Ändere die Ausgabe auf deinen Namen.</li>
-          <li>Erweitere auf zwei Ausgaben untereinander.</li>
-        </ol>
+        <h2>Interaktive Übungen</h2>
+        <div class="task" data-require="system.out.println(|;" data-forbid="class">
+  <h3>Aufgabe 1</h3>
+  <p>Schreibe eine Zeile, die &quot;Hi&quot; ausgibt.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+<div class="task" data-require="system.out.println(|;" data-forbid="class">
+  <h3>Aufgabe 2</h3>
+  <p>Gib deinen Namen aus.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
+<div class="task" data-require="system.out.println(|;" data-forbid="class">
+  <h3>Aufgabe 3</h3>
+  <p>Gib zwei Wörter in einer Zeile aus.</p>
+  <textarea placeholder="Hier 1–3 Zeilen Code schreiben..."></textarea>
+  <button class="check-task">Prüfen</button>
+  <div class="feedback">Noch nicht geprüft.</div>
+</div>
       </section>
     </div>
   </main>
 
-  <footer>
-    <div class="container">Modul 01 · Java-Grundlagen Klasse 7</div>
-  </footer>
+  <footer><div class="container">&copy; Dominik Bechinie | Martin-Andersen-Nexö-Gymnasium | 2026</div></footer>
+  <script src="../js/app.js"></script>
 </body>
 </html>
